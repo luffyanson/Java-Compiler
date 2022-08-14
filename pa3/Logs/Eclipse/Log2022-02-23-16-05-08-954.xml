@@ -1,0 +1,80 @@
+<Events startTimestamp="1645650308954" logVersion="1.0.0.202009141527">
+  <Command __id="0" _type="ShellCommand" date="Wed Feb 23 16:05:11 EST 2022" starttimestamp="1645650308954" timestamp="2077" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="1" _type="ShellCommand" date="Wed Feb 23 16:05:11 EST 2022" starttimestamp="1645650308954" timestamp="2165" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="2" _type="ShellCommand" date="Wed Feb 23 16:05:12 EST 2022" starttimestamp="1645650308954" timestamp="3665" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="3" _type="ShellCommand" date="Wed Feb 23 16:05:12 EST 2022" starttimestamp="1645650308954" timestamp="3842" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="4" _type="ShellCommand" date="Wed Feb 23 16:05:14 EST 2022" starttimestamp="1645650308954" timestamp="5673" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="5" _type="ShellCommand" date="Wed Feb 23 16:05:14 EST 2022" starttimestamp="1645650308954" timestamp="5829" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="8" _type="RunCommand" date="Wed Feb 23 16:05:31 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="22292" type="Run" />
+  <Command __id="9" _type="RunCommand" date="Wed Feb 23 16:05:31 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="22294" type="Run" />
+  <Command __id="10" _type="RunCommand" date="Wed Feb 23 16:05:31 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="22364" type="Run" />
+  <Command __id="11" _type="RunCommand" date="Wed Feb 23 16:05:31 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="22365" type="Run" />
+  <Command __id="12" _type="ExceptionCommand" date="Wed Feb 23 16:05:31 EST 2022" starttimestamp="1645650308954" timestamp="22467" type="Exception">
+    <exceptionString><![CDATA[Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: 0
+	at miniJava.Compiler.main(Compiler.java:14)
+]]></exceptionString>
+  </Command>
+  <Command __id="13" _type="ShellCommand" date="Wed Feb 23 16:05:45 EST 2022" starttimestamp="1645650308954" timestamp="36244" type="ECLIPSE_LOST_FOCUS" />
+  <Command __id="6" _type="DiffBasedFileOpenCommand" date="Wed Feb 23 16:05:16 EST 2022" docASTNodeCount="163" docActiveCodeLength="1007" docExpressionCount="111" docLength="1007" projectName="pa1" starttimestamp="1645650308954" timestamp="7917">
+    <filePath><![CDATA[F:\eclipse2018-09\workspace\pa1\src\miniJava\Compiler.java]]></filePath>
+    <diff><![CDATA[null]]></diff>
+    <snapshot><![CDATA[package miniJava;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+
+import miniJava.SyntacticAnalyzer.Parser;
+import miniJava.SyntacticAnalyzer.Scanner;
+
+public class Compiler {
+	public static void main(String[] args) {
+		InputStream inputStream = null;
+		try {
+			inputStream = new FileInputStream(args[0]);
+		} catch (FileNotFoundException e) {
+			System.out.println("Input file " + args[0] + " not found");
+			System.exit(1);
+		}
+		
+		ErrorReporter errorReporter = new ErrorReporter();
+		Scanner scanner = new Scanner(inputStream, errorReporter);
+		Parser parser = new Parser(scanner, errorReporter);
+		
+		System.out.println("Syntactic analysis ... ");
+		parser.parse();
+		System.out.print("Sytactic analysis complete: ");
+		if (errorReporter.hasErrors()) {
+			System.out.println("Invalid miniJava program");
+			System.exit(4);
+		}
+		else {
+			System.out.println("Valid miniJava program");
+			System.exit(0);
+		}
+	}
+}
+]]></snapshot>
+  </Command>
+  <Command __id="14" _type="ShellCommand" date="Wed Feb 23 16:05:58 EST 2022" starttimestamp="1645650308954" timestamp="49265" type="ECLIPSE_GAINED_FOCUS" />
+  <Command __id="15" _type="MoveCaretCommand" caretOffset="205" date="Wed Feb 23 16:05:58 EST 2022" docOffset="362" starttimestamp="1645650308954" timestamp="49430" />
+  <Command __id="16" _type="DiffBasedFileOpenCommand" date="Wed Feb 23 16:06:32 EST 2022" docASTNodeCount="33" docActiveCodeLength="154" docExpressionCount="13" docLength="154" projectName="pa1" starttimestamp="1645650308954" timestamp="83789">
+    <filePath><![CDATA[F:\eclipse2018-09\workspace\pa1\src\miniJava\test.java]]></filePath>
+    <diff><![CDATA[null]]></diff>
+    <snapshot><![CDATA[package miniJava;
+
+public class test {
+	public static void main(String[] args) {
+		String[] b = {"testfile"};
+		Compiler a = new Compiler();
+	}
+}
+]]></snapshot>
+  </Command>
+  <Command __id="18" _type="RunCommand" date="Wed Feb 23 16:06:44 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="95430" type="Run" />
+  <Command __id="19" _type="RunCommand" date="Wed Feb 23 16:06:44 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="95430" type="Run" />
+  <Command __id="20" _type="RunCommand" date="Wed Feb 23 16:06:44 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="95564" type="Run" />
+  <Command __id="21" _type="RunCommand" date="Wed Feb 23 16:06:44 EST 2022" kind="HitBreakPoint" projectName="pa1" starttimestamp="1645650308954" timestamp="95564" type="Run" />
+  <Command __id="23" _type="MoveCaretCommand" caretOffset="205" date="Wed Feb 23 16:08:27 EST 2022" docOffset="362" starttimestamp="1645650308954" timestamp="199036" />
+  <Command __id="24" _type="MoveCaretCommand" caretOffset="273" date="Wed Feb 23 16:08:30 EST 2022" docOffset="430" starttimestamp="1645650308954" timestamp="201296" />
+</Events>

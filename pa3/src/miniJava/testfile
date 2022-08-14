@@ -1,0 +1,46 @@
+class ErrorReporter {
+
+		int numErrors;
+		public static boolean gg;
+
+		static void ErrorReporter(int j, boolean k, boo[] a1) {
+			numErrors = 0;
+			try = !(a == a);
+		}
+
+		public static boolean hasErrors(kk[] b, int[] c) {
+			return numErrors > 0;
+		}
+
+		public void reportError(String message) {
+			{
+				int i = 1;
+				boolean j = 2;
+				bo jdsaf2 = afdaf;
+				this = 1;
+				this.adsfaew.dafawe.d = adf123;
+				sdfawe.dsfaewf.safew[sdafaewfa.sdafaew.sdafaew.asd] = dsfs2;
+				this = this;
+				return;
+				//sdf asdf asdf
+				return asdfawef;
+				if (adf) { dsafae = 12;}
+				else adfaewf =dsfaef;
+				while (ccccc == dafawe) sdafaew = dsaf; 
+				a = -1;
+				a = !true;
+				a = false;
+				a = new dafef();
+				a = new asdfaadf[!true];
+				while(this) this = this;
+				return adfawef.dfaefd.faef(adfa,asdf,1,true,dsafew);
+				return (1);	
+							/******************/
+				dafdsf = asdfad;
+				
+
+			}
+			
+			System.out.println(message,dfaewf,asdfa,ef,aew);
+		}	
+}
